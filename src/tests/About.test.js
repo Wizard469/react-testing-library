@@ -11,7 +11,7 @@ describe('Testing component About', () => {
     expect(text).toBeDefined();
   });
 
-  it('tests if the page contains a h2 heading with the text "About Pokédex"', () => {
+  it('tests if the page contains an h2 heading with the text "About Pokédex"', () => {
     renderWithRouter(<About />);
 
     const h2 = screen.getByRole('heading', { name: /About Pokédex/i });

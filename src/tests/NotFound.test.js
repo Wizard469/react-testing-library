@@ -5,7 +5,7 @@ import { NotFound } from '../pages';
 
 describe('Testing component NotFound',
   () => {
-    it(`tests if the page contains a h2 heading
+    it(`tests if the page contains an h2 heading
     with the text "Page requested not found`,
     () => {
       renderWithRouter(<NotFound />);
