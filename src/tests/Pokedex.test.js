@@ -4,6 +4,8 @@ import userEvent from '@testing-library/user-event';
 import renderWithRouter from '../helper/renderWithRouter';
 import App from '../App';
 
+const Charmander = 'Charmander sprite';
+
 describe('Testing component About',
   () => {
     it('tests if the page contains an h2 heading with the text "Encountered pokémons"',
@@ -22,7 +24,7 @@ describe('Testing component About',
       const btnNext = screen.getByTestId('next-pokemon');
       userEvent.click(btnNext);
 
-      const charmander = screen.getByAltText('Charmander sprite');
+      const charmander = screen.getByAltText(Charmander);
       expect(charmander).toBeDefined();
       userEvent.click(btnNext);
 
@@ -92,7 +94,7 @@ describe('Testing component About',
         const all = screen.getByRole('button', { name: /all/i });
 
         userEvent.click(btn2);
-        const charmander = screen.getByAltText('Charmander sprite');
+        const charmander = screen.getByAltText(Charmander);
         expect(charmander).toBeDefined();
         expect(all).toBeDefined();
 
@@ -119,7 +121,7 @@ describe('Testing component About',
         expect(pikachu).toBeDefined();
 
         userEvent.click(btnNext);
-        const charmander = screen.getByAltText('Charmander sprite');
+        const charmander = screen.getByAltText(Charmander);
         expect(charmander).toBeDefined();
       });
   });
